@@ -6,27 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
   </head>
-  <style>
-      h3{
-          text-decoration: underline;
-      }
-  </style>
+  <link rel="stylesheet" href="styles/about.css" />
   <body>
     <!--A page that includes a brief overview about me, some images of myself and
       the images I care about, a short bio, and a section that
       outlines my strengths and accomplishments. Will also have links to my
       Twitter, LinkedIn, Facebook-->
-    <a href="index.html">Home</a>
-    <a href="proposal.html">Proposal</a>
-    <a href="projects.html">Projects</a>
-    <a href="sitemap.html">Sitemap</a>
-    <a href="contact.html">Contact</a>
-    <a href="about.html">About</a>
-    <a href="places.html">Places</a>
-    <a href="funstuff.html">Fun Stuff</a>
-    <h1>About Me</h1>
-    <p>currently located in: Boston, MA</p>
-    <p>
+      <div class="header">
+        <a class="active" href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="places.html">Places</a>
+        <a href="funstuff.html">Fun Stuff</a>
+        <a href="sitemap.html">Sitemap</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <h1 class="styled">About Me</h1>
+    <p class="styled">currently located in: Boston, MA</p>
+    <p class="styled">
       Bio: I am an undergraduate student at Babson College passionate about
       technology, marketplaces, design, and consumer behavior. I was born and
       raised in Los Angeles and am of Italian and British descent. I am a
@@ -36,24 +33,26 @@
       startup full time.
     </p>
 
-    <h3>Strengths</h3>
-    <ul>
+    <h3 class="styled">Strengths</h3>
+    <div id="bullets"><ul>
         <li>Marketing</li>
         <li>Product Design</li>
         <li>Customer Relationship Management</li>
         <li>Consumer Behavior</li>
     </ul>
-    <h3>Things I need to learn more about</h3>
-    <ul>
+  </div>
+    <h3 class="styled">Things I want to learn more about</h3>
+    <div id="bullets"><ul>
         <li>Organization</li>
         <li>Financial Modeling</li>
         <li>Digital Advertising</li>
         <li>Logistics</li>
     </ul>
-
+</div>
+<div id="bullets">
     <p><a href="https://www.twitter.com/alexavanti">Follow me on Twitter</a></p>
     <p><a href="https://www.linkedin.com/alexfantappie">Connect on LinkedIn</a></p>
     <p><a href="https://www.instagram.com/_afanta">Follow Me on Instagram</a></body></p>
-
+</div>
   </body>
 </html>

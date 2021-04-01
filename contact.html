@@ -4,17 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-Contact</head>
+Contact
+<style>
+body {
+box-sizing: border-box;}
+
+div.header {
+  overflow: hidden;
+  width: 100vw;
+  height: 50px;
+  left: 0px;
+  top: 0px;
+  background: #2fecd5;
+  font-family: 'Verdana';
+}
+div.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+div.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+div.header a.active {
+  background-color: #ffffff;
+  color: black;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #2fecd5;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #2fecd5;
+}
+form{
+  font-family: 'Verdana';
+}
+h1{
+  font-family: 'Verdana';
+}
+</style>
 <body>
-    <a href="index.html">Home</a>
-    <a href="proposal.html">Proposal</a>
+  <div class="header">
+    <a class="active" href="index.html">Home</a>
     <a href="projects.html">Projects</a>
-    <a href="sitemap.html">Sitemap</a>
-    <a href="contact.html">Contact</a>
     <a href="about.html">About</a>
     <a href="places.html">Places</a>
     <a href="funstuff.html">Fun Stuff</a>
-    
+    <a href="sitemap.html">Sitemap</a>
+    <a href="contact.html">Contact</a>
+</div>
+<h1>Get In Touch</h1>
     <form method="post" action="mailto: afantappie1@babson.edu">
         <div>
           <label for="Name">Name:</label>
