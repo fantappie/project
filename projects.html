@@ -5,10 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="manifest" href="images/site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/site.webmanifest" />
   </head>
   <style>
     body {
@@ -76,6 +90,7 @@
         <th>Avanti</th>
         <td>
           <img
+            id="avanti"
             src="images/avanti.png"
             title="Avanti logo"
             alt="green photo of Avanti company logo"
@@ -96,6 +111,7 @@
         <th>eTower</th>
         <td>
           <img
+            id="etower"
             src="images/eTower.png"
             title="eTower logo"
             alt="eTower logo and slogan"
@@ -166,6 +182,32 @@
     src="https://www.googletagmanager.com/gtag/js?id=G-E7W0RHWZHD"
   ></script>
   <script>
+    document.getElementById("avanti").onmouseover = function () {
+      mouseOver();
+    };
+    document.getElementById("avanti").onmouseout = function () {
+      mouseOut();
+    };
+    function mouseOver() {
+      document.getElementById("avanti").src = "images/avantiteam.png";
+    }
+    function mouseOut() {
+      document.getElementById("avanti").src = "images/avanti.png";
+    }
+    document.getElementById("etower").onmouseover = function () {
+      mouseOver1();
+    };
+    document.getElementById("etower").onmouseout = function () {
+      mouseOut1();
+    };
+
+    function mouseOver1() {
+      document.getElementById("etower").src = "images/etowergroup.jpg";
+    }
+    function mouseOut1() {
+      document.getElementById("etower").src = "images/eTower.png";
+    }
+
     window.dataLayer = window.dataLayer || [];
     function gtag() {
       dataLayer.push(arguments);

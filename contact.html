@@ -82,22 +82,22 @@ h1{
     <a href="contact.html">Contact</a>
 </div>
 <h1>Get In Touch</h1>
-    <form method="post" action="mailto: afantappie1@babson.edu">
+    <form id="form" method="post" action="mailto:alex@joinavanti.com">
         <div>
-          <label for="Name">Name:</label>
+          <label for="name">Name:</label>
           <input
             type="text"
-            id="Name"
-            name="Name"
+            id="name"
+            name="name"
             placeholder="Enter your name here"
           />
         </div>
         <div>
-          <label for="Email">Email:</label>
+          <label for="email">Email:</label>
           <input
             type="text"
-            id="Email"
-            name="Email"
+            id="email"
+            name="email"
             placeholder="Email"
           />
         </div>
@@ -153,19 +153,31 @@ h1{
           >
         </div>
         <div>
-          <button type="submit" name="submit-button">Send</button>
+          <button id="submit" type="submit" name="submit-button">Send</button>
           <button type="reset" name="reset-button">Reset</button>
         </div>
       </fieldset>
     </form>
-</body>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E7W0RHWZHD"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    </body>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E7W0RHWZHD"></script>
   <script>
+    function verify() {
+      let myForm = document.getElementById("form");
+            let fullName = myForm.name.value;
+            console.log(fullName);
+            let email = myForm.email.value;
+           
+            if (fullName == "" || email == ""){
+    alert("please fill out form");
+    return false;
+            }
+          document.getElementById("form").onsubmit = verify;
+          }
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
   
     gtag('config', 'G-E7W0RHWZHD');
-  </script>
+    </script>
 </html>

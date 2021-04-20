@@ -5,13 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-<link rel="manifest" href="images/site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/site.webmanifest" />
   </head>
   <link rel="stylesheet" href="styles/website.css" />
-  <body>
+  <body onload="slideShow()">
     <div class="header">
       <a class="active" href="index.html">Home</a>
       <a href="projects.html">Projects</a>
@@ -22,9 +36,15 @@
       <a href="contact.html">Contact</a>
     </div>
 
-    <h2 class="styled">Hey there stranger!</h2>
-    <img src="images/me1.jpg" alt="photo of me" title="Alex" width="700" />
-    <h3 class="styled">My name's Alex.</h3>
+    <h2 id="header" class="styled">Hey there stranger!</h2>
+    <h3 id="intro" class="styled">I am Alex.</h3>
+    <img
+      id="me"
+      src="images/me1.jpg"
+      alt="photo of me"
+      title="Alex"
+      width="700"
+    />
 
     <div id="bullets">
       <p>Here are some quick points about me:</p>
@@ -38,6 +58,7 @@
           year with some friends
         </li>
       </ul>
+      <p><a href="projects.html">Learn More About Me</a></p>
     </div>
   </body>
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -46,6 +67,50 @@
     src="https://www.googletagmanager.com/gtag/js?id=G-E7W0RHWZHD"
   ></script>
   <script>
+    const slides = ["images/me1.jpg", "Images/redjaguar.jpg"];
+    let i = 0;
+
+    const colors = ["#2fecd5", "#18d89f"];
+
+    function slideShow() {
+      let alexImg = document.getElementById("me");
+      if (i == slides.length) {
+        i = 0;
+      }
+      alexImg.src = slides[i];
+      alexImg.style.borderColor = colors[i];
+      i++;
+      setTimeout("slideShow()", 1000);
+    }
+    
+    document.getElementById("header").onmouseover = function(){mouseOver();
+      };
+      document.getElementById("header").onmouseout = function () {
+        mouseOut();
+      };
+
+    function mouseOver() {
+        document.getElementById("header").innerText = "Hey there friend!";
+        document.getElementById("header").style.color = "#18d89f";
+      }
+      function mouseOut() {
+        document.getElementById("header").innerText = "Hey there stranger!";
+        document.getElementById("header").style.color = "black";
+      }
+      document.getElementById("intro").onmouseover = function(){mouseOver1();
+      };
+      document.getElementById("intro").onmouseout = function () {
+        mouseOut1();
+      };
+
+    function mouseOver1() {
+        document.getElementById("intro").innerText = "I am happy you're here.";
+        document.getElementById("intro").style.color = "#18d89f";
+      }
+      function mouseOut1() {
+        document.getElementById("intro").innerText = "I am Alex.";
+        document.getElementById("intro").style.color = "black";
+      }
     window.dataLayer = window.dataLayer || [];
     function gtag() {
       dataLayer.push(arguments);

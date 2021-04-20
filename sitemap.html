@@ -10,6 +10,19 @@
 <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
 <link rel="manifest" href="images/site.webmanifest">
   </head>
+  <style>
+    #pledge {
+        position: absolute;
+        color: black;
+        font-family: Arial;
+      }
+      div {
+        position: relative;
+        height: 50px;
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+  </style>
   <body>
     <h2>SiteMap</h2>
     <p><a href="index.html">Home</a></p>
@@ -21,13 +34,33 @@
     <p><a href="places.html">Places</a></p>
     <p><a href="funstuff.html">Fun Stuff</a></p>
 
-    <p>
-      "I, Alex Fantappie, pledge my honor that I have neither received nor provided
-      unauthorized assistance during the completion of this work. I have read
-      the term project instructions and observed all the restrictions and
-      limitations specified therein."
-
-      "All intellectual property at this website is in the public domain or is the property of the site-owner."
-    </p>
+    <div><p id="pledge">
+      This honor pledge will move. </p>
+    </div>
   </body>
+  <script>
+    const msgList = [
+      "I, Alex Fantappie, pledge my honor that I have neither received nor provided unauthorized assistance during the completion of this work.",
+      "I have read the term project instructions and observed all the restrictions and limitations specified therein.",
+    ];
+    const pledge = document.getElementById("pledge");
+    let p = 10;
+    let i = 0;
+
+    function move() {
+      pledge.innerHTML = msgList[i];
+      pledge.style.left = p + "px";
+      if (p > document.querySelector('div').clientWidth - 50) {
+        p = 5;
+        i++;
+        if (i === msgList.length) {
+          i = 0;
+        }
+      } else {
+        p = p + 1;
+      }
+      setTimeout(move, 5);
+    }
+    document.querySelector("body").onload = move;
+  </script>
 </html>
